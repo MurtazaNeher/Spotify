@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://kit.fontawesome.com/ccbe6a25e7.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <nav>
+        <ul>
+            <li class="brand"><img src="images/logo.png" alt="Spotify">Spotify</li>
+            <li>Home</li>
+            <li>About</li>
+
+        </ul>
+    </nav>
+
+    <div class="container">
+
+        <div class="songList">
+            <h1>Top Super-Hit Songs</h1>
+
+            <div class="songItemContainer">
+                <div class="songItem">
+                    <img src="/covers/cover1.jpg" alt="1">
+                    <span class="songNAme">Bol do na zara</span>
+
+                    <span class="songListPlay"><span class="timeSpan">04:53 <i class="fa-regular fa-play"></i></span>
+
+
+                    </span>
+                </div>
+
+                <div class="songItem">
+                    <img src="/covers/cover2.jpg" alt="1">
+                    <span class="songNAme">Suno na sange</span>
+
+                    <span class="songListPlay"><span class="timeSpan">03:22 <i class="fa-regular fa-play"></i></span>
+
+
+                    </span>
+                </div>
+                <div class="songItem">
+                    <img src="/covers/cover3.jpg" alt="1">
+                    <span class="songNAme">Hua hai aaj pehli baar</span>
+
+                    <span class="songListPlay"><span class="timeSpan">05:09 <i class="fa-regular fa-play"></i></span>
+
+
+                    </span>
+                </div>
+                <div class="songItem">
+                    <img src="/covers/cover4.jpg" alt="1">
+                    <span class="songNAme">Hum mar jaayenge</span>
+
+                    <span class="songListPlay"><span class="timeSpan">05:06 <i class="fa-regular fa-play"></i></span>
+
+
+                    </span>
+                </div>
+                <div class="songItem">
+                    <img src="/covers/cover5.jpg" alt="1">
+                    <span class="songNAme">Mere rashke qamar</span>
+
+                    <span class="songListPlay"><span class="timeSpan">03:40 <i class="fa-regular fa-play"></i></span>
+
+
+                    </span>
+                </div>
+                <div class="songItem">
+                    <img src="/covers/cover6.jpg" alt="1">
+                    <span class="songNAme">Sanam re</span>
+
+                    <span class="songListPlay"><span class="timeSpan">05:08 <i class="fa-regular fa-play"></i></span>
+
+
+                    </span>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="songBanner"></div>
+    </div>
+
+    <div class="bottom">
+        <input type="range" name="range" id="progressBar" min="0" max="100" value="0">
+
+        <div class="icons">
+            <i class="fa-solid fa-3x fa-backward"></i>
+            <i class="fa-regular fa-3x fa-play" id="masterPlay"></i>
+            <i class="fa-solid fa-3x fa-forward"></i>
+        </div>
+
+        <div class="songsInfo">
+            <img src="/images/playing.gif" width="42px" id="gif">Bol do na zara
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
