@@ -32,15 +32,15 @@ masterPlay.addEventListener('click', () => {
     if (audioElement.paused || audioElement.currentTime <= 0) {
         audioElement.play();
         gif.style.opacity = 1;
-        masterPlay.classList.remove('fa-play');
-        masterPlay.classList.add('fa-pause');
+        masterPlay.classList.remove('fa-play-circle');
+        masterPlay.classList.add('fa-pause-circle');
 
     } else {
 
         audioElement.pause();
         gif.style.opacity = 0;
-        masterPlay.classList.remove(' fa-pause');
-        masterPlay.classList.add(' fa-play');
+        masterPlay.classList.remove('fa-pause-circle');
+        masterPlay.classList.add('fa-play-circle');
 
 
     }
@@ -57,6 +57,9 @@ progressBar.addEventListener('change', () => {
 
 Array.from(document.getElementsByClassName('songItemPlay')).forEach((element) => {
     element.addEventListener('click', (e) => {
+        // element.classList.remove('fa-play-circle');
+        // element.classList.add('fa-pause-circle');
+
 
     })
 })
