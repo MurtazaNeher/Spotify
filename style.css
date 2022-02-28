@@ -66,6 +66,11 @@ nav ul li {
     flex-direction: column;
 }
 
+.songListPlay i {
+    padding-right: 20px;
+    cursor: pointer;
+}
+
 .icons {
     margin-top: 14px;
 }

@@ -6,17 +6,25 @@ let audioElement = new Audio('songs/1.mp3');
 let masterPlay = document.getElementById('masterPlay');
 let gif = document.getElementById('gif');
 let progressBar = document.getElementById('progressBar');
+let songItems = Array.from(document.getElementsByClassName('songItem'));
+
 
 
 let songs = [
-    { songName: "Bol do na zara", filePath: "songs/1.mp3", coverPth: "covers/cover1.jpg" },
-    { songName: "Suno na sange", filePath: "songs/2.mp3", coverPth: "covers/cover2.jpg" },
-    { songName: "Hua hai aaj pehli baar", filePath: "songs/3.mp3", coverPth: "covers/cover3.jpg" },
-    { songName: "Hum mar jaayenge", filePath: "songs/4.mp3", coverPth: "covers/cover4.jpg" },
-    { songName: "Mere rashke qamar", filePath: "songs/5.mp3", coverPth: "covers/cover5.jpg" },
-    { songName: "Sanam re", filePath: "songs/6.mp3", coverPth: "covers/cover6.jpg" },
+    { songName: "Bol do na zara", filePath: "songs/1.mp3", coverPath: "covers/cover1.jpg", duration: "04:53" },
+    { songName: "Suno na sange", filePath: "songs/2.mp3", coverPath: "covers/cover2.jpg", duration: "03:22" },
+    { songName: "Hua hai aaj pehli baar", filePath: "songs/3.mp3", coverPath: "covers/cover3.jpg", duration: "05:09" },
+    { songName: "Hum mar jaayenge", filePath: "songs/4.mp3", coverPath: "covers/cover4.jpg", duration: "05:06" },
+    { songName: "Mere rashke qamar", filePath: "songs/5.mp3", coverPath: "covers/cover5.jpg", duration: "03:40" },
+    { songName: "Sanam re", filePath: "songs/6.mp3", coverPath: "covers/cover6.jpg", duration: "05:08" },
 
 ]
+
+songItems.forEach((element, i) => {
+    element.getElementsByTagName("img")[0].src = songs[i].coverPath;
+    element.getElementsByClassName("songName")[0].innerText = songs[i].songName;
+    element.getElementsByClassName("timeSpan")[0].innerText = songs[i].duration;
+})
 
 //Listen events
 
@@ -45,4 +53,10 @@ audioElement.addEventListener('timeupdate', () => {
 progressBar.addEventListener('change', () => {
 
     audioElement.currentTime = (progressBar.value * audioElement.duration) / 100;
+})
+
+Array.from(document.getElementsByClassName('songItemPlay')).forEach((element) => {
+    element.addEventListener('click', (e) => {
+
+    })
 })
